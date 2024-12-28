@@ -9,12 +9,14 @@
     "@heroicons/react": "^2.2.0",
     "@mui/icons-material": "^6.3.0",
     "@mui/material": "^6.3.0",
+    "@mui/x-data-grid": "^7.23.5",
     "@testing-library/react": "^16.1.0",
     "cra-template": "1.2.0",
     "ecommercial": "file:",
     "react": "^19.0.0",
     "react-alice-carousel": "^2.9.1",
     "react-dom": "^19.0.0",
+    "react-router-dom": "^7.1.1",
     "react-scripts": "5.0.1"
   },
   "scripts": {

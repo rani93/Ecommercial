@@ -23,7 +23,7 @@ const MainCarousel = () => {
         <img role='presentation' key={item.id} className="object-cover w-[80%] h-[75vh] cursor-pointer mx-auto" src={item.image} alt="carousel" />
     );
     return (
-        <AliceCarousel
+        <AliceCarousel 
             items={items}
             disableButtonsControls={true}
             autoPlay

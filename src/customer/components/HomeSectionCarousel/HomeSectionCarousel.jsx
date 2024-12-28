@@ -4,8 +4,8 @@ import AliceCarousel from "react-alice-carousel";
 import "react-alice-carousel/lib/alice-carousel.css";
 import HomeSectionCard from "../HomeSectionCard/HomeSectionCard";
 import { useState ,useRef} from "react";
-import { mens_kurta } from "../../../Data/mens_kurta";
-export default function HomeSectionCarousel() {
+// import { mens_kurta } from "../../../Data/mens_kurta";
+export default function HomeSectionCarousel({data, sectionName}) {
     const carouselRef = useRef(null);
   const [activeIndex, setActiveIndex] = useState(0);
   const responsive = {
@@ -24,12 +24,14 @@ export default function HomeSectionCarousel() {
     carouselRef.current.slideNext();
   }
   const syncActiveIndex = (e) => setActiveIndex(e);
-  const items = mens_kurta.slice(0,10).map(
+  // const items = mens_kurta.slice(0,10).map(
+    const items = data.slice(0,10).map(
     (item, index) => <HomeSectionCard key={index} product={item}/>
   );
 
   return (
     <div className="relative px-4 border lg:px-8">
+      <h2 className="py-5 text-2xl font-extrabold text-gray-800" >{sectionName}</h2>
       <div className="relative p-7">
         <AliceCarousel
          ref={carouselRef}
