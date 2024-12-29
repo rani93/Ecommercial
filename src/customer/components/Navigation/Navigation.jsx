@@ -16,7 +16,11 @@ import {
   TabPanels,
 } from '@headlessui/react'
 import { Bars3Icon, MagnifyingGlassIcon, ShoppingBagIcon, XMarkIcon } from '@heroicons/react/24/outline'
-import {navigation} from './navigationData';
+import { navigation } from './navigationData';
+import AnimationIcon from '@mui/icons-material/Animation';
+import Avatar from '@mui/material/Avatar';
+import Typography from '@mui/material/Typography';
+import Button from '@mui/material/Button';
 
 
 
@@ -167,23 +171,26 @@ export default function Navigation() {
 
               {/* Logo */}
               <div className="flex ml-4 lg:ml-0">
+               
                 <a href="#">
-                  <span className="sr-only">Your Company</span>
-                  <img
+                  {/* <span className="sr-only">Your Company</span> */}
+                  <AnimationIcon className='w-auto h-8 text-indigo-600'/>
+                  {/* <img
                     alt=""
                     src="https://tailwindui.com/plus/img/logos/mark.svg?color=indigo&shade=600"
+                    // src={AnimationIcon}
                     className="w-auto h-8"
-                  />
+                  /> */}
                 </a>
               </div>
 
               {/* Flyout menus */}
               <PopoverGroup className="hidden lg:ml-8 lg:block lg:self-stretch">
                 <div className="flex h-full space-x-8">
-                {navigation.categories.map((category) => (
+                  {navigation.categories.map((category) => (
                     <Popover key={category.name} className="flex">
                       <div className="relative flex ">
-                      <PopoverButton className="relative z-10 -mb-px flex items-center border-b-2 border-transparent pt-px text-sm font-medium text-gray-700 transition-colors duration-200 ease-out hover:text-gray-800 data-[open]:border-indigo-600 data-[open]:text-indigo-600">
+                        <PopoverButton className="relative z-10 -mb-px flex items-center border-b-2 border-transparent pt-px text-sm font-medium text-gray-700 transition-colors duration-200 ease-out hover:text-gray-800 data-[open]:border-indigo-600 data-[open]:text-indigo-600">
                           {category.name}
                         </PopoverButton>
                       </div>
@@ -258,7 +265,7 @@ export default function Navigation() {
               </PopoverGroup>
 
               <div className="flex items-center ml-auto">
-                <div className="hidden lg:flex lg:flex-1 lg:items-center lg:justify-end lg:space-x-6">
+                {/* <div className="hidden lg:flex lg:flex-1 lg:items-center lg:justify-end lg:space-x-6">
                   <a href="#" className="text-sm font-medium text-gray-700 hover:text-gray-800">
                     Sign in
                   </a>
@@ -266,16 +273,19 @@ export default function Navigation() {
                   <a href="#" className="text-sm font-medium text-gray-700 hover:text-gray-800">
                     Create account
                   </a>
-                </div>
+                </div> */}
+                <Avatar sx={{bgcolor:'#4f46e5'}}>R</Avatar>
+
 
                 <div className="hidden lg:ml-8 lg:flex">
                   <a href="#" className="flex items-center text-gray-700 hover:text-gray-800">
                     <img
                       alt=""
-                      src="https://tailwindui.com/plus/img/flags/flag-canada.svg"
+                      src="https://catamphetamine.gitlab.io/country-flag-icons/3x2/IN.svg"
+
                       className="block w-5 h-auto shrink-0"
                     />
-                    <span className="block ml-3 text-sm font-medium">CAD</span>
+                    <span className="block ml-3 text-sm font-medium">IN</span>
                     <span className="sr-only">, change currency</span>
                   </a>
                 </div>
