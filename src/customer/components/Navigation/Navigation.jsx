@@ -28,7 +28,8 @@ export default function Navigation() {
   const [open, setOpen] = useState(false)
 
   return (
-    <div className="bg-white">
+    <div className="bg-white ">
+     
       {/* Mobile menu */}
       <Dialog open={open} onClose={setOpen} className="relative z-40 lg:hidden">
         <DialogBackdrop
@@ -152,9 +153,9 @@ export default function Navigation() {
       </Dialog>
 
       <header className="relative bg-white">
-        <p className="flex items-center justify-center h-10 px-4 text-sm font-medium text-white bg-indigo-600 sm:px-6 lg:px-8">
+        {/* <p className="flex items-center justify-center h-10 px-4 text-sm font-medium text-white bg-indigo-600 sm:px-6 lg:px-8">
           Get free delivery on orders over $100
-        </p>
+        </p> */}
 
         <nav aria-label="Top" className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
           <div className="border-b border-gray-200">
@@ -274,7 +275,7 @@ export default function Navigation() {
                     Create account
                   </a>
                 </div> */}
-                <Avatar sx={{bgcolor:'#4f46e5'}}>R</Avatar>
+                <Avatar sx={{bgcolor:'#4f46e5', cursor:"pointer"}}>R</Avatar>
 
 
                 <div className="hidden lg:ml-8 lg:flex">

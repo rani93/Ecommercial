@@ -20,7 +20,7 @@ const responsive = {
 
 const MainCarousel = () => {
     const items = MainCarouselData.map((item) =>
-        <img role='presentation' key={item.id} className="object-cover w-[80%] h-[75vh] cursor-pointer mx-auto" src={item.image} alt="carousel" />
+        <img role='presentation' key={item.id} className="object-cover w-[100%] h-[92vh] cursor-pointer mx-auto" src={item.image} alt="carousel" />
     );
     return (
         <AliceCarousel 
